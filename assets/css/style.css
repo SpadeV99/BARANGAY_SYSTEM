@@ -1,23 +1,34 @@
-/* Custom CSS for Barangay Management System */
+/* Custom CSS for Barangay Management System - Minimalist Design */
 
-/* Root Variables - Philippine Flag Theme */
+/* Root Variables - Philippine Flag Theme (Minimalist) */
 :root {
     --primary-color: #0038A8; /* Philippine Blue */
     --secondary-color: #CE1126; /* Philippine Red */
-    --success-color: #198754;
-    --warning-color: #FCD116; /* Philippine Yellow/Gold */
-    --danger-color: #CE1126; /* Philippine Red */
+    --accent-color: #FCD116; /* Philippine Yellow/Gold */
     --light-color: #FFFFFF; /* White */
-    --dark-color: #212529;
-    --gold-color: #FCD116; /* Philippine Gold */
-    --blue-color: #0038A8; /* Philippine Blue */
-    --red-color: #CE1126; /* Philippine Red */
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 56, 168, 0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Global Styles */
+/* Global Styles - Minimalist */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background-color: #fafbfc;
+    font-weight: 400;
+    overflow-x: hidden;
 }
 
 /* Smooth Scrolling */
@@ -25,331 +36,626 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Carousel Styles */
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.display-5 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Container adjustments */
+.container {
+    max-width: 1200px;
+}
+
+/* Carousel Styles - Minimalist */
 .carousel-img {
-    height: 500px;
+    height: 70vh;
     object-fit: cover;
-    filter: brightness(0.7);
+    filter: brightness(0.4) contrast(1.1);
+    transition: var(--transition);
+}
+
+.carousel-item:hover .carousel-img {
+    filter: brightness(0.5) contrast(1.2);
+    transform: scale(1.02);
 }
 
 .carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards;
+}
+
+@keyframes slideUpFade {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .carousel-caption h1,
 .carousel-caption h2 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
-/* Navigation Styles - Philippine Theme */
+.carousel-caption .lead {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: var(--transition);
+}
+
+.carousel-indicators button.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Navigation Styles - Minimalist */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, var(--blue-color), var(--red-color)) !important;
-    border-bottom: 3px solid var(--gold-color);
+    background: rgba(255, 255, 255, 0.95) !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 1px 20px var(--shadow-light);
+    border-bottom: 1px solid rgba(0, 56, 168, 0.1);
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 2px 30px var(--shadow-medium);
 }
 
 .navbar-brand {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.5rem;
-    color: var(--gold-color) !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--primary-color) !important;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-color) !important;
+    transform: translateY(-1px);
+}
+
+.navbar-brand i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+    transition: var(--transition);
+}
+
+.navbar-brand:hover i {
+    transform: rotate(5deg) scale(1.1);
 }
 
 .nav-link {
     font-weight: 500;
-    transition: all 0.3s ease;
-    color: white !important;
+    color: var(--text-primary) !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem;
+    border-radius: 8px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.nav-link:hover {
-    color: var(--gold-color) !important;
-    transform: translateY(-1px);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 56, 168, 0.1), transparent);
+    transition: var(--transition);
 }
 
+.nav-link:hover::before {
+    left: 100%;
+}
+
+.nav-link:hover,
 .nav-link.active {
-    color: var(--gold-color) !important;
-    font-weight: 600;
+    color: var(--primary-color) !important;
+    background-color: rgba(0, 56, 168, 0.05);
+    transform: translateY(-2px);
 }
 
 .btn-outline-light {
-    border-color: var(--gold-color);
-    color: var(--gold-color);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: var(--transition);
 }
 
 .btn-outline-light:hover {
-    background-color: var(--gold-color);
-    border-color: var(--gold-color);
-    color: var(--blue-color);
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 56, 168, 0.25);
 }
 
-/* Section Styles - Philippine Theme */
+/* Section Styles - Minimalist */
 section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 5rem 0;
+    position: relative;
 }
 
-.display-5 {
-    margin-bottom: 1rem;
-    color: var(--blue-color);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Alternating section backgrounds */
 section:nth-child(even) {
-    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    background-color: #ffffff;
 }
 
 section:nth-child(odd) {
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    background-color: #fafbfc;
 }
 
-/* Special backgrounds for key sections */
-#announcements {
-    background: linear-gradient(135deg, rgba(252, 209, 22, 0.1), rgba(255, 255, 255, 0.9));
-    border-top: 4px solid var(--gold-color);
-    border-bottom: 4px solid var(--gold-color);
+.display-5 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
 }
 
-#officials {
-    background: linear-gradient(135deg, rgba(0, 56, 168, 0.05), rgba(255, 255, 255, 0.9));
-    border-top: 4px solid var(--blue-color);
-    border-bottom: 4px solid var(--blue-color);
+.display-5::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
 }
 
-#complaint {
-    background: linear-gradient(135deg, rgba(206, 17, 38, 0.05), rgba(255, 255, 255, 0.9));
-    border-top: 4px solid var(--red-color);
-    border-bottom: 4px solid var(--red-color);
+/* Section icons with hover effects */
+.display-5 i {
+    color: var(--accent-color);
+    transition: var(--transition);
+    display: inline-block;
 }
 
-/* Card Styles - Philippine Theme */
+.display-5:hover i {
+    transform: scale(1.1) rotate(5deg);
+    color: var(--secondary-color);
+}
+
+/* Minimalist decorative elements */
+.section-decorator {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    margin: 1rem auto;
+    border-radius: 1px;
+}
+
+/* Card Styles - Minimalist with Hover Animations */
 .card {
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    background: var(--light-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 20px var(--shadow-light);
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
-    border-color: var(--gold-color);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--shadow-hover);
 }
 
 .card-header {
-    border-bottom: none;
+    border: none;
+    background: white;
     font-weight: 600;
+    color: var(--primary-color);
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Philippine-themed card headers */
-.card-header.bg-primary {
-    background: linear-gradient(135deg, var(--blue-color), #1a4bb8) !important;
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* Announcement cards special styling */
+#announcements .card {
+    transition: var(--transition);
+}
+
+#announcements .card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+#announcements .card-header.bg-primary {
+    background: var(--primary-color) !important;
     color: white;
-    border-bottom: 3px solid var(--gold-color);
 }
 
-.card-header.bg-success {
-    background: linear-gradient(135deg, #198754, #20c997) !important;
+#announcements .card-header.bg-success {
+    background: #10b981 !important;
     color: white;
-    border-bottom: 3px solid var(--gold-color);
 }
 
-.card-header.bg-warning {
-    background: linear-gradient(135deg, var(--gold-color), #ffdd57) !important;
-    color: var(--blue-color);
-    border-bottom: 3px solid var(--blue-color);
+#announcements .card-header.bg-warning {
+    background: var(--accent-color) !important;
+    color: var(--primary-color);
     font-weight: 700;
 }
 
-/* Officials cards special styling */
+/* Officials cards */
 #officials .card {
-    border: 3px solid var(--gold-color);
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border: 1px solid rgba(0, 56, 168, 0.1);
+    transition: var(--transition);
 }
 
 #officials .card:hover {
-    border-color: var(--blue-color);
-    box-shadow: 0 15px 35px rgba(0, 56, 168, 0.2) !important;
+    border-color: var(--primary-color);
+    transform: translateY(-10px);
 }
 
-/* Button Styles - Philippine Theme */
+/* Button Styles - Minimalist with Hover Animations */
 .btn {
-    border-radius: 25px;
+    border-radius: 8px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition);
+}
+
+.btn:hover::before {
+    left: 100%;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--blue-color), #1a4bb8);
-    border-color: var(--blue-color);
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
     color: white;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #1a4bb8, var(--blue-color));
-    border-color: var(--gold-color);
-    box-shadow: 0 8px 20px rgba(0, 56, 168, 0.3);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 8px 25px rgba(206, 17, 38, 0.25);
 }
 
 .btn-lg {
-    padding: 15px 35px;
+    padding: 1rem 2rem;
     font-size: 1.1rem;
-    border: 3px solid transparent;
+    border-radius: 12px;
 }
 
-.btn-lg:hover {
-    border-color: var(--gold-color);
-}
-
-/* Special Philippine-themed buttons */
-.btn-filipino {
-    background: linear-gradient(135deg, var(--red-color), var(--blue-color));
+/* Floating action button style */
+.btn-float {
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
     color: white;
-    border: 2px solid var(--gold-color);
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.btn-filipino:hover {
-    background: linear-gradient(135deg, var(--blue-color), var(--red-color));
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(206, 17, 38, 0.3);
+.btn-float:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 56, 168, 0.3);
 }
 
-/* Table Styles - Philippine Theme */
-.table-hover tbody tr:hover {
-    background: linear-gradient(135deg, rgba(252, 209, 22, 0.1), rgba(0, 56, 168, 0.05));
+.btn-float::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
 }
 
-.table th {
-    border-top: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    background: linear-gradient(135deg, var(--blue-color), #1a4bb8);
+.btn-float:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Table Styles - Minimalist */
+.table {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 20px var(--shadow-light);
+    background: white;
+}
+
+.table thead th {
+    border: none;
+    background: var(--primary-color);
     color: white;
-    border-bottom: 3px solid var(--gold-color);
+    font-weight: 600;
+    padding: 1rem;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 0.9rem;
 }
 
-.table-primary {
-    background: linear-gradient(135deg, var(--blue-color), #1a4bb8);
-    color: white;
+.table tbody tr {
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.table-primary th {
-    background: linear-gradient(135deg, var(--blue-color), #1a4bb8);
-    border-bottom: 3px solid var(--gold-color);
+.table tbody tr:hover {
+    background: rgba(0, 56, 168, 0.03);
+    transform: scale(1.01);
 }
 
-/* Badge Styles - Philippine Theme */
+.table tbody td {
+    padding: 1rem;
+    border: none;
+    vertical-align: middle;
+}
+
+.table-responsive {
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 20px var(--shadow-light);
+}
+
+/* Badge Styles - Minimalist */
 .badge {
     font-size: 0.8rem;
-    padding: 8px 15px;
-    font-weight: 600;
-    border: 2px solid transparent;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 20px;
+    border: none;
 }
 
 .badge.bg-success {
-    background: linear-gradient(135deg, #198754, #20c997) !important;
-    border-color: var(--gold-color);
+    background: #10b981 !important;
 }
 
 .badge.bg-warning {
-    background: var(--gold-color) !important;
-    color: var(--blue-color) !important;
-    border-color: var(--blue-color);
-    font-weight: 700;
+    background: var(--accent-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .badge.bg-danger {
-    background: var(--red-color) !important;
-    border-color: var(--gold-color);
+    background: var(--secondary-color) !important;
 }
 
-/* Form Styles - Philippine Theme */
+/* Form Styles - Minimalist */
 .form-control,
 .form-select {
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    border: 3px solid var(--gold-color);
-    transition: all 0.3s ease;
-    background-color: white;
+    padding: 0.75rem 1rem;
+    transition: var(--transition);
+    background: white;
+    font-weight: 400;
 }
 
 .form-control:focus,
 .form-select:focus {
-    border-color: var(--blue-color);
-    box-shadow: 0 0 0 0.25rem rgba(0, 56, 168, 0.25);
-    background-color: rgba(252, 209, 22, 0.05);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 56, 168, 0.1);
+    background: rgba(0, 56, 168, 0.02);
+    outline: none;
 }
 
 .form-label {
-    font-weight: 700;
-    color: var(--blue-color);
-    margin-bottom: 8px;
-    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
     font-size: 0.9rem;
-    letter-spacing: 0.5px;
 }
 
-/* Map Section */
+/* Form hover effects */
+.form-control:hover,
+.form-select:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+/* Map Section - Minimalist */
 #map {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow-medium);
+    transition: var(--transition);
 }
 
-/* Officials Section */
-.card img {
-    border: 4px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+#map:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px var(--shadow-hover);
 }
 
-.card:hover img {
+/* Officials Section - Enhanced Minimalist */
+#officials .card {
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+#officials .card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 56, 168, 0.05), transparent);
+    transform: rotate(45deg);
+    transition: var(--transition);
+    opacity: 0;
+}
+
+#officials .card:hover::after {
+    opacity: 1;
+    animation: shimmer 1s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% { transform: rotate(45deg) translateX(-100%); }
+    100% { transform: rotate(45deg) translateX(100%); }
+}
+
+#officials .card img {
+    transition: var(--transition);
+    border: 3px solid white;
+    box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
+#officials .card:hover img {
     transform: scale(1.05);
+    box-shadow: 0 8px 25px var(--shadow-hover);
 }
 
-/* Contact Section Icons - Philippine Theme */
-.rounded-circle {
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, var(--blue-color), var(--red-color)) !important;
-    border: 3px solid var(--gold-color);
-}
-
-.card:hover .rounded-circle {
-    transform: scale(1.15) rotate(5deg);
-    background: linear-gradient(135deg, var(--red-color), var(--blue-color)) !important;
-    box-shadow: 0 8px 20px rgba(252, 209, 22, 0.4);
-}
-
-/* Contact cards */
+/* Contact Section - Minimalist with Hover Effects */
 #contact .card {
-    border: 3px solid var(--gold-color);
-    background: linear-gradient(135deg, #ffffff, rgba(252, 209, 22, 0.05));
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
 #contact .card:hover {
-    border-color: var(--blue-color);
-    background: linear-gradient(135deg, rgba(0, 56, 168, 0.05), #ffffff);
+    transform: translateY(-8px);
 }
 
-/* Footer Styles - Philippine Theme */
+.rounded-circle {
+    transition: var(--transition);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.rounded-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.card:hover .rounded-circle::before {
+    transform: translateX(100%);
+}
+
+.card:hover .rounded-circle {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 56, 168, 0.3);
+}
+
+/* Footer Styles - Minimalist */
 footer {
-    background: linear-gradient(135deg, var(--blue-color), var(--red-color)) !important;
-    border-top: 5px solid var(--gold-color);
+    background: var(--primary-color) !important;
     color: white;
+    border-top: 3px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color), var(--accent-color));
 }
 
 footer h5 {
-    color: var(--gold-color) !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--accent-color) !important;
     font-weight: 700;
 }
 
@@ -423,106 +729,177 @@ footer p, footer small {
     }
 }
 
-/* Utility Classes - Philippine Theme */
-.text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.bg-gradient-primary {
-    background: linear-gradient(135deg, var(--blue-color), var(--red-color));
-}
-
-.bg-gradient-filipino {
-    background: linear-gradient(45deg, var(--blue-color), var(--red-color), var(--gold-color));
-}
-
-.shadow-lg {
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-}
-
-/* Philippine flag stripe effect */
-.filipino-stripes {
-    background: linear-gradient(
-        to right,
-        var(--blue-color) 0%,
-        var(--blue-color) 33%,
-        var(--red-color) 33%,
-        var(--red-color) 66%,
-        var(--gold-color) 66%,
-        var(--gold-color) 100%
-    );
-    height: 5px;
-    width: 100%;
-}
-
-/* Text colors for Philippine theme */
-.text-filipino-blue {
-    color: var(--blue-color) !important;
-}
-
-.text-filipino-red {
-    color: var(--red-color) !important;
-}
-
-.text-filipino-gold {
-    color: var(--gold-color) !important;
-}
-
-/* Scroll to top button - Philippine Theme */
+/* Scroll to Top Button - Minimalist */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: linear-gradient(135deg, var(--blue-color), var(--red-color));
-    color: var(--gold-color);
-    border: 3px solid var(--gold-color);
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: none;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
     z-index: 1000;
-    transition: all 0.3s ease;
-    font-size: 1.2rem;
-    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 56, 168, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .scroll-to-top:hover {
-    background: linear-gradient(135deg, var(--red-color), var(--blue-color));
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 25px rgba(252, 209, 22, 0.4);
-    color: white;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 56, 168, 0.4);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
 }
 
-/* Additional Philippine-themed elements */
-.filipino-accent {
-    border-left: 5px solid var(--gold-color);
-    border-right: 5px solid var(--blue-color);
-    background: linear-gradient(135deg, rgba(206, 17, 38, 0.05), rgba(255, 255, 255, 0.95));
+/* Utility Classes - Minimalist */
+.text-primary {
+    color: var(--primary-color) !important;
 }
 
-.filipino-border {
-    border: 3px solid;
-    border-image: linear-gradient(45deg, var(--blue-color), var(--red-color), var(--gold-color)) 1;
+.text-secondary {
+    color: var(--secondary-color) !important;
 }
 
-/* Animation for Philippine pride */
-@keyframes filipinoPride {
-    0% { 
-        background-position: 0% 50%; 
-        transform: scale(1);
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.bg-primary {
+    background: var(--primary-color) !important;
+}
+
+.bg-secondary {
+    background: var(--secondary-color) !important;
+}
+
+.bg-accent {
+    background: var(--accent-color) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.border-secondary {
+    border-color: var(--secondary-color) !important;
+}
+
+.border-accent {
+    border-color: var(--accent-color) !important;
+}
+
+/* Custom hover effects */
+.hover-lift {
+    transition: var(--transition);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.hover-scale {
+    transition: var(--transition);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow {
+    transition: var(--transition);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(0, 56, 168, 0.3);
+}
+
+/* Enhanced responsive design */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+        padding: 1rem 0;
     }
-    50% { 
-        background-position: 100% 50%; 
-        transform: scale(1.02);
+    
+    .carousel-item img {
+        height: 400px;
     }
-    100% { 
-        background-position: 0% 50%; 
-        transform: scale(1);
+    
+    section {
+        padding: 4rem 0;
     }
 }
 
-.pride-animation {
-    background: linear-gradient(-45deg, var(--blue-color), var(--red-color), var(--gold-color), var(--blue-color));
-    background-size: 400% 400%;
-    animation: filipinoPride 3s ease infinite;
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 250px;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+    
+    .display-5 {
+        font-size: 1.8rem;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
 }
