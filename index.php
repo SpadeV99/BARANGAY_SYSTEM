@@ -33,25 +33,25 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
+                        <a class="nav-link active" href="#home">Home (Tahanan)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#announcements">Announcements</a>
+                        <a class="nav-link" href="#announcements">Announcements (Mga Pabatid)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#appointments">Appointments</a>
+                        <a class="nav-link" href="#appointments">Appointments (Tipanan)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#location">Location</a>
+                        <a class="nav-link" href="#location">Location (Lokasyon)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#complaint">Submit Complaint</a>
+                        <a class="nav-link" href="#complaint">Submit Complaint (Reklamo)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#officials">Officials</a>
+                        <a class="nav-link" href="#officials">Officials (Mga Opisyal)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact">Contact (Makipag-ugnayan)</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-light ms-2 px-3" href="admin/login.php">Admin Login</a>
@@ -112,7 +112,7 @@ session_start();
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2 class="display-5 fw-bold text-filipino-blue">
-                        <i class="fas fa-bullhorn me-3 text-filipino-gold"></i>Announcements
+                        <i class="fas fa-bullhorn me-3 text-filipino-gold"></i>Announcements (Mga Pabatid)
                     </h2>
                     <p class="lead text-muted">Stay updated with the latest barangay news and updates</p>
                     <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
@@ -122,7 +122,7 @@ session_start();
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-primary text-white">
-                            <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i>Community Meeting</h5>
+                            <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i>Community Meeting (Pagpupulong)</h5>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Monthly community meeting scheduled for September 15, 2025 at 7:00 PM in the Barangay Hall.</p>
@@ -133,7 +133,7 @@ session_start();
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-success text-white">
-                            <h5 class="mb-0"><i class="fas fa-medkit me-2"></i>Health Program</h5>
+                            <h5 class="mb-0"><i class="fas fa-medkit me-2"></i>Health Program (Programang Pangkalusugan)</h5>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Free medical check-up and vaccination program on September 20, 2025 from 8:00 AM to 5:00 PM.</p>
@@ -144,7 +144,7 @@ session_start();
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-header bg-warning text-dark">
-                            <h5 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Road Closure</h5>
+                            <h5 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Road Closure (Pagsasara ng Kalsada)</h5>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Main road will be closed for maintenance on September 10, 2025. Please use alternative routes.</p>
@@ -162,7 +162,7 @@ session_start();
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2 class="display-5 fw-bold text-filipino-blue">
-                        <i class="fas fa-clock me-3 text-filipino-gold"></i>Upcoming Appointments
+                        <i class="fas fa-clock me-3 text-filipino-gold"></i>Upcoming Appointments (Mga Nakatakdang Tipanan)
                     </h2>
                     <p class="lead text-muted">Schedule your appointment with barangay officials</p>
                     <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
@@ -176,29 +176,29 @@ session_start();
                                 <table class="table table-hover">
                                     <thead class="table-primary">
                                         <tr>
-                                            <th>Date</th>
-                                            <th>Time</th>
-                                            <th>Service</th>
-                                            <th>Available Slots</th>
+                                            <th>Date (Petsa)</th>
+                                            <th>Time (Oras)</th>
+                                            <th>Service (Serbisyo)</th>
+                                            <th>Available Slots (Bakanteng Puwesto)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>September 5, 2025</td>
                                             <td>9:00 AM - 5:00 PM</td>
-                                            <td>Certificate Requests</td>
+                                            <td>Certificate Requests (Mga Kahilingang Sertipiko)</td>
                                             <td><span class="badge bg-success">15 Available</span></td>
                                         </tr>
                                         <tr>
                                             <td>September 8, 2025</td>
                                             <td>1:00 PM - 4:00 PM</td>
-                                            <td>Business Permit</td>
+                                            <td>Business Permit (Permit sa Negosyo)</td>
                                             <td><span class="badge bg-warning">5 Available</span></td>
                                         </tr>
                                         <tr>
                                             <td>September 12, 2025</td>
                                             <td>8:00 AM - 12:00 PM</td>
-                                            <td>Consultation</td>
+                                            <td>Consultation (Konsultasyon)</td>
                                             <td><span class="badge bg-success">20 Available</span></td>
                                         </tr>
                                     </tbody>
@@ -206,7 +206,7 @@ session_start();
                             </div>
                             <div class="text-center mt-3">
                                 <a href="pages/appointment.php" class="btn btn-primary btn-lg">
-                                    <i class="fas fa-calendar-plus me-2"></i>Book Appointment
+                                    <i class="fas fa-calendar-plus me-2"></i>Book Appointment (Mag-book ng Tipanan)
                                 </a>
                             </div>
                         </div>
@@ -222,7 +222,7 @@ session_start();
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2 class="display-5 fw-bold text-filipino-blue">
-                        <i class="fas fa-map-marker-alt me-3 text-filipino-gold"></i>Our Location
+                        <i class="fas fa-map-marker-alt me-3 text-filipino-gold"></i>Our Location (Aming Lokasyon)
                     </h2>
                     <p class="lead text-muted">Find us on the map</p>
                     <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
@@ -269,7 +269,7 @@ session_start();
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2 class="display-5 fw-bold text-filipino-red">
-                        <i class="fas fa-file-alt me-3 text-filipino-gold"></i>Submit a Complaint
+                        <i class="fas fa-file-alt me-3 text-filipino-gold"></i>Submit a Complaint (Maghain ng Reklamo)
                     </h2>
                     <p class="lead text-muted">Your voice matters - help us improve our community</p>
                     <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
@@ -282,38 +282,38 @@ session_start();
                             <form id="complaintForm">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="complainantName" class="form-label">Full Name</label>
+                                        <label for="complainantName" class="form-label">Full Name (Buong Pangalan)</label>
                                         <input type="text" class="form-control" id="complainantName" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="complainantEmail" class="form-label">Email Address</label>
+                                        <label for="complainantEmail" class="form-label">Email Address (Email)</label>
                                         <input type="email" class="form-control" id="complainantEmail" required>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="complainantPhone" class="form-label">Phone Number</label>
+                                        <label for="complainantPhone" class="form-label">Phone Number (Numero ng Telepono)</label>
                                         <input type="tel" class="form-control" id="complainantPhone">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="complaintType" class="form-label">Complaint Type</label>
+                                        <label for="complaintType" class="form-label">Complaint Type (Uri ng Reklamo)</label>
                                         <select class="form-select" id="complaintType" required>
-                                            <option value="">Select type...</option>
-                                            <option value="noise">Noise Complaint</option>
-                                            <option value="sanitation">Sanitation Issue</option>
-                                            <option value="public_safety">Public Safety</option>
-                                            <option value="road_maintenance">Road Maintenance</option>
-                                            <option value="other">Other</option>
+                                            <option value="">Select type... (Pumili ng uri...)</option>
+                                            <option value="noise">Noise Complaint (Reklamo sa Ingay)</option>
+                                            <option value="sanitation">Sanitation Issue (Problema sa Kalinisan)</option>
+                                            <option value="public_safety">Public Safety (Kaligtasan ng Publiko)</option>
+                                            <option value="road_maintenance">Road Maintenance (Pagpapanatili ng Kalsada)</option>
+                                            <option value="other">Other (Iba pa)</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="complaintDetails" class="form-label">Complaint Details</label>
-                                    <textarea class="form-control" id="complaintDetails" rows="5" placeholder="Please describe your complaint in detail..." required></textarea>
+                                    <label for="complaintDetails" class="form-label">Complaint Details (Detalye ng Reklamo)</label>
+                                    <textarea class="form-control" id="complaintDetails" rows="5" placeholder="Please describe your complaint in detail... (Pakilarawan ang inyong reklamo nang detalyado...)" required></textarea>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-lg">
-                                        <i class="fas fa-paper-plane me-2"></i>Submit Complaint
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Complaint (Maghain ng Reklamo)
                                     </button>
                                 </div>
                             </form>
@@ -330,7 +330,7 @@ session_start();
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2 class="display-5 fw-bold text-filipino-blue">
-                        <i class="fas fa-users me-3 text-filipino-gold"></i>Barangay Officials
+                        <i class="fas fa-users me-3 text-filipino-gold"></i>Barangay Officials (Mga Opisyal ng Barangay)
                     </h2>
                     <p class="lead text-muted">Meet our dedicated barangay leadership</p>
                     <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
@@ -415,7 +415,7 @@ session_start();
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2 class="display-5 fw-bold text-filipino-blue">
-                        <i class="fas fa-phone me-3 text-filipino-gold"></i>Contact Us
+                        <i class="fas fa-phone me-3 text-filipino-gold"></i>Contact Us (Makipag-ugnayan sa Amin)
                     </h2>
                     <p class="lead text-muted">Get in touch with us for any inquiries or assistance</p>
                     <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
@@ -428,7 +428,7 @@ session_start();
                             <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                                 <i class="fas fa-map-marker-alt fa-lg"></i>
                             </div>
-                            <h5 class="card-title">Visit Us</h5>
+                            <h5 class="card-title">Visit Us (Bisitahin Kami)</h5>
                             <p class="card-text">
                                 Barangay Hall<br>
                                 Your Street Address<br>
@@ -443,7 +443,7 @@ session_start();
                             <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                                 <i class="fas fa-phone fa-lg"></i>
                             </div>
-                            <h5 class="card-title">Call Us</h5>
+                            <h5 class="card-title">Call Us (Tawagan Kami)</h5>
                             <p class="card-text">
                                 <strong>Landline:</strong> (123) 456-7890<br>
                                 <strong>Mobile:</strong> +63 912 345 6789<br>
@@ -458,7 +458,7 @@ session_start();
                             <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                                 <i class="fas fa-envelope fa-lg"></i>
                             </div>
-                            <h5 class="card-title">Email Us</h5>
+                            <h5 class="card-title">Email Us (Mag-email sa Amin)</h5>
                             <p class="card-text">
                                 <strong>General:</strong> info@barangay.gov.ph<br>
                                 <strong>Captain:</strong> captain@barangay.gov.ph<br>
@@ -470,14 +470,14 @@ session_start();
             </div>
             <div class="row mt-4">
                 <div class="col-12 text-center">
-                    <h4 class="mb-3">Office Hours</h4>
+                    <h4 class="mb-3">Office Hours (Oras ng Opisina)</h4>
                     <div class="row justify-content-center">
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <p class="mb-1"><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
-                                    <p class="mb-1"><strong>Saturday:</strong> 8:00 AM - 12:00 PM</p>
-                                    <p class="mb-0"><strong>Sunday:</strong> Closed (Emergency only)</p>
+                                    <p class="mb-1"><strong>Monday - Friday (Lunes - Biyernes):</strong> 8:00 AM - 5:00 PM</p>
+                                    <p class="mb-1"><strong>Saturday (Sabado):</strong> 8:00 AM - 12:00 PM</p>
+                                    <p class="mb-0"><strong>Sunday (Linggo):</strong> Closed (Emergency only / Sarado - Emergency lamang)</p>
                                 </div>
                             </div>
                         </div>

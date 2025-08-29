@@ -105,7 +105,7 @@ p {
 }
 
 .carousel-caption {
-    background: rgba(255, 255, 255, 0.95);
+    
     backdrop-filter: blur(20px);
     border-radius: var(--border-radius);
     padding: 2rem;
