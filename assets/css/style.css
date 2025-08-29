@@ -1,14 +1,17 @@
 /* Custom CSS for Barangay Management System */
 
-/* Root Variables */
+/* Root Variables - Philippine Flag Theme */
 :root {
-    --primary-color: #0d6efd;
-    --secondary-color: #6c757d;
+    --primary-color: #0038A8; /* Philippine Blue */
+    --secondary-color: #CE1126; /* Philippine Red */
     --success-color: #198754;
-    --warning-color: #ffc107;
-    --danger-color: #dc3545;
-    --light-color: #f8f9fa;
+    --warning-color: #FCD116; /* Philippine Yellow/Gold */
+    --danger-color: #CE1126; /* Philippine Red */
+    --light-color: #FFFFFF; /* White */
     --dark-color: #212529;
+    --gold-color: #FCD116; /* Philippine Gold */
+    --blue-color: #0038A8; /* Philippine Blue */
+    --red-color: #CE1126; /* Philippine Red */
 }
 
 /* Global Styles */
@@ -40,27 +43,49 @@ html {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Navigation Styles */
+/* Navigation Styles - Philippine Theme */
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, var(--blue-color), var(--red-color)) !important;
+    border-bottom: 3px solid var(--gold-color);
 }
 
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
+    color: var(--gold-color) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .nav-link {
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    color: white !important;
 }
 
 .nav-link:hover {
-    color: #fff !important;
+    color: var(--gold-color) !important;
     transform: translateY(-1px);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Section Styles */
+.nav-link.active {
+    color: var(--gold-color) !important;
+    font-weight: 600;
+}
+
+.btn-outline-light {
+    border-color: var(--gold-color);
+    color: var(--gold-color);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--gold-color);
+    border-color: var(--gold-color);
+    color: var(--blue-color);
+}
+
+/* Section Styles - Philippine Theme */
 section {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -68,17 +93,50 @@ section {
 
 .display-5 {
     margin-bottom: 1rem;
+    color: var(--blue-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Card Styles */
+/* Alternating section backgrounds */
+section:nth-child(even) {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+}
+
+section:nth-child(odd) {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+}
+
+/* Special backgrounds for key sections */
+#announcements {
+    background: linear-gradient(135deg, rgba(252, 209, 22, 0.1), rgba(255, 255, 255, 0.9));
+    border-top: 4px solid var(--gold-color);
+    border-bottom: 4px solid var(--gold-color);
+}
+
+#officials {
+    background: linear-gradient(135deg, rgba(0, 56, 168, 0.05), rgba(255, 255, 255, 0.9));
+    border-top: 4px solid var(--blue-color);
+    border-bottom: 4px solid var(--blue-color);
+}
+
+#complaint {
+    background: linear-gradient(135deg, rgba(206, 17, 38, 0.05), rgba(255, 255, 255, 0.9));
+    border-top: 4px solid var(--red-color);
+    border-bottom: 4px solid var(--red-color);
+}
+
+/* Card Styles - Philippine Theme */
 .card {
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    background: var(--light-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    border-color: var(--gold-color);
 }
 
 .card-header {
@@ -86,60 +144,160 @@ section {
     font-weight: 600;
 }
 
-/* Button Styles */
+/* Philippine-themed card headers */
+.card-header.bg-primary {
+    background: linear-gradient(135deg, var(--blue-color), #1a4bb8) !important;
+    color: white;
+    border-bottom: 3px solid var(--gold-color);
+}
+
+.card-header.bg-success {
+    background: linear-gradient(135deg, #198754, #20c997) !important;
+    color: white;
+    border-bottom: 3px solid var(--gold-color);
+}
+
+.card-header.bg-warning {
+    background: linear-gradient(135deg, var(--gold-color), #ffdd57) !important;
+    color: var(--blue-color);
+    border-bottom: 3px solid var(--blue-color);
+    font-weight: 700;
+}
+
+/* Officials cards special styling */
+#officials .card {
+    border: 3px solid var(--gold-color);
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+}
+
+#officials .card:hover {
+    border-color: var(--blue-color);
+    box-shadow: 0 15px 35px rgba(0, 56, 168, 0.2) !important;
+}
+
+/* Button Styles - Philippine Theme */
 .btn {
     border-radius: 25px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--blue-color), #1a4bb8);
+    border-color: var(--blue-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1a4bb8, var(--blue-color));
+    border-color: var(--gold-color);
+    box-shadow: 0 8px 20px rgba(0, 56, 168, 0.3);
 }
 
 .btn-lg {
-    padding: 12px 30px;
+    padding: 15px 35px;
     font-size: 1.1rem;
+    border: 3px solid transparent;
 }
 
-/* Table Styles */
+.btn-lg:hover {
+    border-color: var(--gold-color);
+}
+
+/* Special Philippine-themed buttons */
+.btn-filipino {
+    background: linear-gradient(135deg, var(--red-color), var(--blue-color));
+    color: white;
+    border: 2px solid var(--gold-color);
+}
+
+.btn-filipino:hover {
+    background: linear-gradient(135deg, var(--blue-color), var(--red-color));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(206, 17, 38, 0.3);
+}
+
+/* Table Styles - Philippine Theme */
 .table-hover tbody tr:hover {
-    background-color: rgba(13, 110, 253, 0.1);
+    background: linear-gradient(135deg, rgba(252, 209, 22, 0.1), rgba(0, 56, 168, 0.05));
 }
 
 .table th {
     border-top: none;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 0.5px;
+    background: linear-gradient(135deg, var(--blue-color), #1a4bb8);
+    color: white;
+    border-bottom: 3px solid var(--gold-color);
 }
 
-/* Badge Styles */
+.table-primary {
+    background: linear-gradient(135deg, var(--blue-color), #1a4bb8);
+    color: white;
+}
+
+.table-primary th {
+    background: linear-gradient(135deg, var(--blue-color), #1a4bb8);
+    border-bottom: 3px solid var(--gold-color);
+}
+
+/* Badge Styles - Philippine Theme */
 .badge {
     font-size: 0.8rem;
-    padding: 6px 12px;
+    padding: 8px 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
 }
 
-/* Form Styles */
+.badge.bg-success {
+    background: linear-gradient(135deg, #198754, #20c997) !important;
+    border-color: var(--gold-color);
+}
+
+.badge.bg-warning {
+    background: var(--gold-color) !important;
+    color: var(--blue-color) !important;
+    border-color: var(--blue-color);
+    font-weight: 700;
+}
+
+.badge.bg-danger {
+    background: var(--red-color) !important;
+    border-color: var(--gold-color);
+}
+
+/* Form Styles - Philippine Theme */
 .form-control,
 .form-select {
     border-radius: 8px;
-    border: 2px solid #e9ecef;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid var(--gold-color);
+    transition: all 0.3s ease;
+    background-color: white;
 }
 
 .form-control:focus,
 .form-select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    border-color: var(--blue-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 56, 168, 0.25);
+    background-color: rgba(252, 209, 22, 0.05);
 }
 
 .form-label {
-    font-weight: 600;
-    color: var(--dark-color);
+    font-weight: 700;
+    color: var(--blue-color);
     margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
 /* Map Section */
@@ -158,18 +316,45 @@ section {
     transform: scale(1.05);
 }
 
-/* Contact Section Icons */
+/* Contact Section Icons - Philippine Theme */
 .rounded-circle {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, var(--blue-color), var(--red-color)) !important;
+    border: 3px solid var(--gold-color);
 }
 
 .card:hover .rounded-circle {
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(5deg);
+    background: linear-gradient(135deg, var(--red-color), var(--blue-color)) !important;
+    box-shadow: 0 8px 20px rgba(252, 209, 22, 0.4);
 }
 
-/* Footer Styles */
+/* Contact cards */
+#contact .card {
+    border: 3px solid var(--gold-color);
+    background: linear-gradient(135deg, #ffffff, rgba(252, 209, 22, 0.05));
+}
+
+#contact .card:hover {
+    border-color: var(--blue-color);
+    background: linear-gradient(135deg, rgba(0, 56, 168, 0.05), #ffffff);
+}
+
+/* Footer Styles - Philippine Theme */
 footer {
-    background: linear-gradient(135deg, var(--dark-color), #343a40) !important;
+    background: linear-gradient(135deg, var(--blue-color), var(--red-color)) !important;
+    border-top: 5px solid var(--gold-color);
+    color: white;
+}
+
+footer h5 {
+    color: var(--gold-color) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+footer p, footer small {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Responsive Design */
@@ -238,36 +423,106 @@ footer {
     }
 }
 
-/* Utility Classes */
+/* Utility Classes - Philippine Theme */
 .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .bg-gradient-primary {
-    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    background: linear-gradient(135deg, var(--blue-color), var(--red-color));
+}
+
+.bg-gradient-filipino {
+    background: linear-gradient(45deg, var(--blue-color), var(--red-color), var(--gold-color));
 }
 
 .shadow-lg {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
-/* Scroll to top button (if needed later) */
+/* Philippine flag stripe effect */
+.filipino-stripes {
+    background: linear-gradient(
+        to right,
+        var(--blue-color) 0%,
+        var(--blue-color) 33%,
+        var(--red-color) 33%,
+        var(--red-color) 66%,
+        var(--gold-color) 66%,
+        var(--gold-color) 100%
+    );
+    height: 5px;
+    width: 100%;
+}
+
+/* Text colors for Philippine theme */
+.text-filipino-blue {
+    color: var(--blue-color) !important;
+}
+
+.text-filipino-red {
+    color: var(--red-color) !important;
+}
+
+.text-filipino-gold {
+    color: var(--gold-color) !important;
+}
+
+/* Scroll to top button - Philippine Theme */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
+    background: linear-gradient(135deg, var(--blue-color), var(--red-color));
+    color: var(--gold-color);
+    border: 3px solid var(--gold-color);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: none;
     z-index: 1000;
     transition: all 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .scroll-to-top:hover {
-    background: #0056b3;
-    transform: translateY(-3px);
+    background: linear-gradient(135deg, var(--red-color), var(--blue-color));
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(252, 209, 22, 0.4);
+    color: white;
+}
+
+/* Additional Philippine-themed elements */
+.filipino-accent {
+    border-left: 5px solid var(--gold-color);
+    border-right: 5px solid var(--blue-color);
+    background: linear-gradient(135deg, rgba(206, 17, 38, 0.05), rgba(255, 255, 255, 0.95));
+}
+
+.filipino-border {
+    border: 3px solid;
+    border-image: linear-gradient(45deg, var(--blue-color), var(--red-color), var(--gold-color)) 1;
+}
+
+/* Animation for Philippine pride */
+@keyframes filipinoPride {
+    0% { 
+        background-position: 0% 50%; 
+        transform: scale(1);
+    }
+    50% { 
+        background-position: 100% 50%; 
+        transform: scale(1.02);
+    }
+    100% { 
+        background-position: 0% 50%; 
+        transform: scale(1);
+    }
+}
+
+.pride-animation {
+    background: linear-gradient(-45deg, var(--blue-color), var(--red-color), var(--gold-color), var(--blue-color));
+    background-size: 400% 400%;
+    animation: filipinoPride 3s ease infinite;
 }

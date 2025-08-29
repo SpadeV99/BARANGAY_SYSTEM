@@ -17,7 +17,7 @@ session_start();
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <i class="fas fa-building me-2"></i>
@@ -55,6 +55,8 @@ session_start();
                 </ul>
             </div>
         </div>
+        <!-- Philippine flag stripe -->
+        <div class="filipino-stripes"></div>
     </nav>
 
     <!-- Image Slider Section -->
@@ -69,22 +71,25 @@ session_start();
                 <div class="carousel-item active">
                     <img src="assets/images/slide1.jpg" class="d-block w-100 carousel-img" alt="Barangay Hall">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1 class="display-4 fw-bold">Welcome to Our Barangay</h1>
-                        <p class="lead">Serving our community with dedication and transparency</p>
+                        <h1 class="display-4 fw-bold text-shadow">Welcome to Our Barangay</h1>
+                        <p class="lead text-shadow">Serving our community with Filipino pride and dedication</p>
+                        <div class="filipino-stripes mt-3"></div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="assets/images/slide2.jpg" class="d-block w-100 carousel-img" alt="Community Events">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="fw-bold">Community First</h2>
-                        <p class="lead">Building stronger communities together</p>
+                        <h2 class="fw-bold text-shadow">Maka-Diyos, Maka-Tao, Makakalikasan, Makabansa</h2>
+                        <p class="lead text-shadow">Building stronger Filipino communities together</p>
+                        <div class="filipino-stripes mt-3"></div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="assets/images/slide3.jpg" class="d-block w-100 carousel-img" alt="Barangay Services">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="fw-bold">Quality Services</h2>
-                        <p class="lead">Efficient and reliable barangay services</p>
+                        <h2 class="fw-bold text-shadow">Quality Services</h2>
+                        <p class="lead text-shadow">Efficient and reliable barangay services para sa bayan</p>
+                        <div class="filipino-stripes mt-3"></div>
                     </div>
                 </div>
             </div>
@@ -102,10 +107,11 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-5 fw-bold text-primary">
-                        <i class="fas fa-bullhorn me-3"></i>Announcements
+                    <h2 class="display-5 fw-bold text-filipino-blue">
+                        <i class="fas fa-bullhorn me-3 text-filipino-gold"></i>Announcements
                     </h2>
                     <p class="lead text-muted">Stay updated with the latest barangay news and updates</p>
+                    <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
                 </div>
             </div>
             <div class="row">
@@ -151,10 +157,11 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-5 fw-bold text-primary">
-                        <i class="fas fa-clock me-3"></i>Upcoming Appointments
+                    <h2 class="display-5 fw-bold text-filipino-blue">
+                        <i class="fas fa-clock me-3 text-filipino-gold"></i>Upcoming Appointments
                     </h2>
                     <p class="lead text-muted">Schedule your appointment with barangay officials</p>
+                    <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -210,10 +217,11 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-5 fw-bold text-primary">
-                        <i class="fas fa-map-marker-alt me-3"></i>Our Location
+                    <h2 class="display-5 fw-bold text-filipino-blue">
+                        <i class="fas fa-map-marker-alt me-3 text-filipino-gold"></i>Our Location
                     </h2>
                     <p class="lead text-muted">Find us on the map</p>
+                    <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
                 </div>
             </div>
             <div class="row">
@@ -256,10 +264,11 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-5 fw-bold text-primary">
-                        <i class="fas fa-file-alt me-3"></i>Submit a Complaint
+                    <h2 class="display-5 fw-bold text-filipino-red">
+                        <i class="fas fa-file-alt me-3 text-filipino-gold"></i>Submit a Complaint
                     </h2>
                     <p class="lead text-muted">Your voice matters - help us improve our community</p>
+                    <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -316,10 +325,11 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-5 fw-bold text-primary">
-                        <i class="fas fa-users me-3"></i>Barangay Officials
+                    <h2 class="display-5 fw-bold text-filipino-blue">
+                        <i class="fas fa-users me-3 text-filipino-gold"></i>Barangay Officials
                     </h2>
                     <p class="lead text-muted">Meet our dedicated barangay leadership</p>
+                    <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
                 </div>
             </div>
             <div class="row">
@@ -327,8 +337,8 @@ session_start();
                     <div class="card text-center shadow h-100">
                         <div class="card-body">
                             <img src="assets/images/captain.jpg" class="rounded-circle mb-3" width="150" height="150" alt="Barangay Captain">
-                            <h5 class="card-title text-primary">Juan Dela Cruz</h5>
-                            <p class="card-text text-muted">Barangay Captain</p>
+                            <h5 class="card-title text-filipino-blue">Juan Dela Cruz</h5>
+                            <p class="card-text text-filipino-red fw-bold">Barangay Captain</p>
                             <p class="small">Leading our community with integrity and dedication for over 10 years.</p>
                         </div>
                     </div>
@@ -337,8 +347,8 @@ session_start();
                     <div class="card text-center shadow h-100">
                         <div class="card-body">
                             <img src="assets/images/secretary.jpg" class="rounded-circle mb-3" width="150" height="150" alt="Barangay Secretary">
-                            <h5 class="card-title text-primary">Maria Santos</h5>
-                            <p class="card-text text-muted">Barangay Secretary</p>
+                            <h5 class="card-title text-filipino-blue">Maria Santos</h5>
+                            <p class="card-text text-filipino-red fw-bold">Barangay Secretary</p>
                             <p class="small">Managing administrative affairs and resident services efficiently.</p>
                         </div>
                     </div>
@@ -347,8 +357,8 @@ session_start();
                     <div class="card text-center shadow h-100">
                         <div class="card-body">
                             <img src="assets/images/treasurer.jpg" class="rounded-circle mb-3" width="150" height="150" alt="Barangay Treasurer">
-                            <h5 class="card-title text-primary">Pedro Rodriguez</h5>
-                            <p class="card-text text-muted">Barangay Treasurer</p>
+                            <h5 class="card-title text-filipino-blue">Pedro Rodriguez</h5>
+                            <p class="card-text text-filipino-red fw-bold">Barangay Treasurer</p>
                             <p class="small">Ensuring transparent and responsible financial management.</p>
                         </div>
                     </div>
@@ -359,8 +369,8 @@ session_start();
                     <div class="card text-center shadow h-100">
                         <div class="card-body">
                             <img src="assets/images/kagawad1.jpg" class="rounded-circle mb-3" width="120" height="120" alt="Kagawad">
-                            <h6 class="card-title text-primary">Ana Garcia</h6>
-                            <p class="card-text text-muted small">Kagawad - Health Committee</p>
+                            <h6 class="card-title text-filipino-blue">Ana Garcia</h6>
+                            <p class="card-text text-filipino-red small fw-bold">Kagawad - Health Committee</p>
                         </div>
                     </div>
                 </div>
@@ -368,8 +378,8 @@ session_start();
                     <div class="card text-center shadow h-100">
                         <div class="card-body">
                             <img src="assets/images/kagawad2.jpg" class="rounded-circle mb-3" width="120" height="120" alt="Kagawad">
-                            <h6 class="card-title text-primary">Carlos Lopez</h6>
-                            <p class="card-text text-muted small">Kagawad - Peace & Order</p>
+                            <h6 class="card-title text-filipino-blue">Carlos Lopez</h6>
+                            <p class="card-text text-filipino-red small fw-bold">Kagawad - Peace & Order</p>
                         </div>
                     </div>
                 </div>
@@ -377,8 +387,8 @@ session_start();
                     <div class="card text-center shadow h-100">
                         <div class="card-body">
                             <img src="assets/images/kagawad3.jpg" class="rounded-circle mb-3" width="120" height="120" alt="Kagawad">
-                            <h6 class="card-title text-primary">Rosa Mendoza</h6>
-                            <p class="card-text text-muted small">Kagawad - Education</p>
+                            <h6 class="card-title text-filipino-blue">Rosa Mendoza</h6>
+                            <p class="card-text text-filipino-red small fw-bold">Kagawad - Education</p>
                         </div>
                     </div>
                 </div>
@@ -386,8 +396,8 @@ session_start();
                     <div class="card text-center shadow h-100">
                         <div class="card-body">
                             <img src="assets/images/kagawad4.jpg" class="rounded-circle mb-3" width="120" height="120" alt="Kagawad">
-                            <h6 class="card-title text-primary">Miguel Torres</h6>
-                            <p class="card-text text-muted small">Kagawad - Infrastructure</p>
+                            <h6 class="card-title text-filipino-blue">Miguel Torres</h6>
+                            <p class="card-text text-filipino-red small fw-bold">Kagawad - Infrastructure</p>
                         </div>
                     </div>
                 </div>
@@ -400,10 +410,11 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-5 fw-bold text-primary">
-                        <i class="fas fa-phone me-3"></i>Contact Us
+                    <h2 class="display-5 fw-bold text-filipino-blue">
+                        <i class="fas fa-phone me-3 text-filipino-gold"></i>Contact Us
                     </h2>
                     <p class="lead text-muted">Get in touch with us for any inquiries or assistance</p>
+                    <div class="filipino-stripes mx-auto" style="width: 200px;"></div>
                 </div>
             </div>
             <div class="row">
@@ -473,16 +484,22 @@ session_start();
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="text-white py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h5><i class="fas fa-building me-2"></i>Barangay Management System</h5>
                     <p class="mb-0">Serving our community with transparency and efficiency.</p>
+                    <small class="text-filipnio-gold">🇵🇭 Proud to serve the Filipino community</small>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="mb-0">&copy; 2025 Barangay System. All rights reserved.</p>
-                    <small class="text-muted">Developed with ❤️ for our community</small>
+                    <small>Developed with ❤️ for our Filipino community</small>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="filipino-stripes"></div>
                 </div>
             </div>
         </div>
