@@ -6,7 +6,12 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barangay Management System</title>
+    <title>Barangay San Roque Management System</title>
+    
+    <!-- Google Fonts - Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +26,7 @@ session_start();
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <i class="fas fa-building me-2"></i>
-                Barangay System
+                Barangay San Roque
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -71,7 +76,7 @@ session_start();
                 <div class="carousel-item active">
                     <img src="assets/images/slide1.jpg" class="d-block w-100 carousel-img" alt="Barangay Hall">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1 class="display-4 fw-bold text-shadow">Welcome to Our Barangay</h1>
+                        <h1 class="display-4 fw-bold text-shadow">Welcome to Barangay San Roque</h1>
                         <p class="lead text-shadow">Serving our community with Filipino pride and dedication</p>
                         <div class="filipino-stripes mt-3"></div>
                     </div>
@@ -488,12 +493,12 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5><i class="fas fa-building me-2"></i>Barangay Management System</h5>
+                    <h5><i class="fas fa-building me-2"></i>Barangay San Roque</h5>
                     <p class="mb-0">Serving our community with transparency and efficiency.</p>
                     <small class="text-filipnio-gold">🇵🇭 Proud to serve the Filipino community</small>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0">&copy; 2025 Barangay System. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2025 Barangay San Roque. All rights reserved.</p>
                     <small>Developed with ❤️ for our Filipino community</small>
                 </div>
             </div>
