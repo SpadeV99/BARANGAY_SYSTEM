@@ -25,8 +25,7 @@ session_start();
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <i class="fas fa-building me-2"></i>
-                Barangay San Roque
+                <img src="assets/images/logo1.png" alt="Barangay San Roque Logo" height="40" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -493,7 +492,10 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5><i class="fas fa-building me-2"></i>Barangay San Roque</h5>
+                    <h5>
+                        <img src="assets/images/logo1.png" alt="Barangay San Roque Logo" height="24" class="me-2">
+                        Barangay San Roque
+                    </h5>
                     <p class="mb-0">Serving our community with transparency and efficiency.</p>
                     <small class="text-filipnio-gold">🇵🇭 Proud to serve the Filipino community</small>
                 </div>

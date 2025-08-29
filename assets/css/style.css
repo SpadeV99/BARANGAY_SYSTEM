@@ -190,21 +190,23 @@ p {
     transition: var(--transition);
     display: flex;
     align-items: center;
+    padding: 0.25rem 0;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .navbar-brand:hover {
-    color: var(--secondary-color) !important;
     transform: translateY(-1px);
 }
 
-.navbar-brand i {
-    color: var(--accent-color);
-    margin-right: 0.5rem;
-    transition: var(--transition);
-}
-
-.navbar-brand:hover i {
-    transform: rotate(5deg) scale(1.1);
+.navbar-brand:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
 .nav-link {
